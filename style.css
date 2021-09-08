@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* dark theme */
+:root {
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue-Second: hsl(237, 14%, 26%);
+  --Check-Background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+html[data-theme-mode="light"] {
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(33, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  
+  --Very-Dark-Blue: hsl(236, 33%, 92%);;
+  --Very-Dark-Desaturated-Blue: hsl(0, 0%, 98%);
+  --Light-Grayish-Blue: hsl(235, 19%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(236, 9%, 61%);
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  background: var(--Very-Dark-Blue);
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  background-image: url(img/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  padding: 3rem 5%;
+}
+.container.light {
+  background-image: url(img/bg-mobile-light.jpg);
+}
+.todo-container {
+  max-width: 400px;
+  height: 100%;
+  margin: auto;
+}
+.title-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: 24px;
+  color: white;
+  letter-spacing: 3px;
+}
+.button-mode {
+  width: 18px;
+  height: 18px;
+}
+.todo-text {
+  height: 2.6rem;
+  display: flex;
+  background: var(--Very-Dark-Desaturated-Blue);
+  border-radius: 4px;
+  padding: 0 4%;
+}
+.input-text {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 12px;
+  color: var(--Light-Grayish-Blue);
+}
+.input-text:placeholder {
+  color: var(--Light-Grayish-Blue);
+}
+.todo-main {
+  margin: 2rem 0;
+}
+.todo-list-cont {
+  margin: 1.2rem 0;
+}
+.todo-list {
+  height: 50vh;
+  border-radius: 4px;
+  overflow: auto;
+  background: var(--Very-Dark-Desaturated-Blue);
+}
+.list {
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 0 4%;
+  border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+}
+.button-check {
+  width: 22px;
+  height: 20px;
+  border: 1px solid var(--Very-Dark-Grayish-Blue);
+  display: flex;
+  border-radius: 12px;
+  transition: .2s ease-out;
+}
+.list.check .button-check,
+.list.check img,
+.list.check .text {
+  background: var(--Check-Background);
+  opacity: 1;
+  text-decoration: line-through;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+.button-check img {
+  width: .5rem;
+  height: .5rem;
+  margin: auto;
+  opacity: 0;
+  background: none !important;
+}
+.text {
+  width: 100%;
+  font-size: 12px;
+  color: var(--Light-Grayish-Blue);
+  text-align: start;
+  padding: .9rem 2%;
+  background: none !important;
+  transition: .2s ease-out;
+}
+.div-btn {
+  height: 100%;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+}
+.button-delete {
+  width: .8rem;
+  height: .8rem;
+  background: none !important;
+  margin-left: auto;
+}
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.6rem;
+  background: var(--Very-Dark-Desaturated-Blue);
+  font-size: 14px;
+  padding: 0 4%;
+  border-radius: 4px;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 12px;
+}
+.button-clear {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 14px;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 12px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.6rem;
+  background: var(--Very-Dark-Desaturated-Blue);
+  font-size: 14px;
+  padding: 0 4%;
+  border-radius: 4px;
+}
+.filter button {
+  margin: 0 1.2rem;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Very-Dark-Grayish-Blue);
+  transition: .2s ease-out;
+}
+.filter button.active {
+  color: hsl(220, 98%, 61%);
+}
+.info {
+  font-size: 12px;
+  color: var(--Very-Dark-Grayish-Blue);
+  text-align: center;
+  padding-bottom: 10%;
+}
+/* responsibility */
+@media (min-width: 574px) {
+  .container {
+    background-image: url(img/bg-desktop-dark.jpg);
+  }
+  .container.light {
+  background-image: url(img/bg-desktop-light.jpg);
+}
+}
