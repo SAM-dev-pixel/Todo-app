@@ -138,4 +138,4 @@ filter.addEventListener('click', e => {
 
 
 //drag and drop list items
-Sortable.create(todoList, {ghostClass: "sortable-ghost", animation: 150, delay: 500});
+Sortable.create(todoList, {ghostClass: "sortable-ghost", animation: 150, delay: 300});
