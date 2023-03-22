@@ -24,19 +24,8 @@
     <title>Frontend Mentor | Todo app</title>
   </head>
   <body>
-    <!--Todo
-
-   Add dynamic number -->
-
-    <!--All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
+   
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
     -->
@@ -82,13 +71,24 @@
             </ul>
             <div class="bottom-bar">
               <p><span class="count">1</span> items left</p>
+              <div class="filter wider-screen">
+                <button type="button" class="button-all filter-btn active">
+                  All
+                </button>
+                <button type="button" class="button-active filter-btn">
+                  Active
+                </button>
+                <button type="button" class="button-completed filter-btn">
+                  Completed
+                </button>
+              </div>
               <button class="button-clear" type="button">
                 Clear Completed
               </button>
             </div>
           </div>
           <!-- filter -->
-          <div class="filter">
+          <div class="filter smaller-screen">
             <button type="button" class="button-all filter-btn active">
               All
             </button>

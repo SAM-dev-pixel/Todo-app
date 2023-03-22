@@ -33,12 +33,15 @@ html[data-theme-mode="light"] {
 }
 body {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 18px;
+  font-size: 100%;
   background: var(--Very-Dark-Blue);
+}
+img {
+  display: block;
 }
 .container {
   margin: auto;
-  background-image: url(img/bg-mobile-dark.jpg);
+  background-image: url(img/bg-mobile-light.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   height: 100vh;
@@ -54,6 +57,7 @@ body {
 }
 .title-btn {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .title {
@@ -93,20 +97,21 @@ body {
   background: var(--Very-Dark-Desaturated-Blue);
 }
 .list {
-  height: 2.6rem;
+  /* height: 2.6rem; */
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
-  padding: 0 4%;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
   border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
 }
 .button-check {
-  width: 22px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 1px solid var(--Very-Dark-Grayish-Blue);
   display: flex;
-  border-radius: 12px;
+  border-radius: 50%;
   transition: 0.2s ease-out;
 }
 .list.check .button-check,
@@ -125,11 +130,12 @@ body {
   background: none !important;
 }
 .text {
-  width: 100%;
-  font-size: 12px;
+  /* width: 100%; */
+  font-size: 1.25rem;
   color: var(--Light-Grayish-Blue);
-  text-align: start;
-  padding: 0.9rem 2%;
+  margin-right: auto;
+  /* text-align: start; */
+  /* padding: 0.9rem 2%; */
   background: none !important;
   transition: 0.2s ease-out;
 }
@@ -146,24 +152,23 @@ body {
   margin-left: auto;
 }
 .bottom-bar {
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 2.6rem;
   background: var(--Very-Dark-Desaturated-Blue);
-  font-size: 14px;
+  font-size: .875rem;
   padding: 0 4%;
   border-radius: 4px;
   color: var(--Very-Dark-Grayish-Blue);
-  font-size: 12px;
 }
 .button-clear {
+  font-size: 0.875rem;
   border: none;
   outline: none;
   background: none;
-  font-size: 14px;
   color: var(--Very-Dark-Grayish-Blue);
-  font-size: 12px;
 }
 .filter {
   display: flex;
@@ -171,17 +176,20 @@ body {
   justify-content: center;
   height: 2.6rem;
   background: var(--Very-Dark-Desaturated-Blue);
-  font-size: 14px;
   padding: 0 4%;
   border-radius: 4px;
+  color: red !important;
+}
+.filter.smaller-screen {
+  display: none;
 }
 .filter button {
+  font-size: .875rem;
+  font-weight: 700;
   margin: 0 1.2rem;
   border: none;
   outline: none;
   background: none;
-  font-size: 14px;
-  font-weight: 500;
   color: var(--Very-Dark-Grayish-Blue);
   transition: 0.2s ease-out;
 }
@@ -202,4 +210,5 @@ body {
   .container.light {
     background-image: url(img/bg-desktop-light.jpg);
   }
+  
 }
