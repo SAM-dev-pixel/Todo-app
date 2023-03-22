@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" data-theme-mode="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en" data-theme-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <link rel="stylesheet" href="style.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
 
-  <!--Todo
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Add dynamic number --> 
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <!--Todo
 
-  <!--All
+   Add dynamic number -->
+
+    <!--All
   Active 
   Completed
 
@@ -33,57 +40,72 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
     -->
-    
-    <div class="container">
-        <div class="todo-container">
-          <!-- title and mode button -->
-          <div class="title-btn">
-            <h1 class="title">TODO</h1>
-            <img src="img/icon-sun.svg" alt="" class="button-mode">
+
+    <main class="container">
+      <div class="todo-container">
+        <!-- title and mode button -->
+        <div class="title-btn">
+          <h1 class="title">TODO</h1>
+          <img src="img/icon-sun.svg" alt="" class="button-mode" />
+        </div>
+        <!-- todo main -->
+        <div class="todo-main">
+          <!-- todo text -->
+          <div class="todo-text">
+            <input
+              type="text"
+              placeholder="Create a new todo..."
+              class="input-text"
+            />
           </div>
-          <!-- todo main -->
-          <div class="todo-main">
-            <!-- todo text -->
-            <div class="todo-text">
-              <input type="text" placeholder="Create a new todo..." class="input-text" />
-            </div>
-            <!--todo list -->
-            <div class="todo-list-cont">
-                <ul class="todo-list">
-                <li class="list check">
-                  <div class="button-check">
-                    <img src="img/icon-check.svg" alt="" class="icon-check">
-                  </div>
-                  <p class="text">Coding</p>
-                  <div class="div-btn"><img src="img/icon-cross.svg" alt="" class="button-delete"></div>
-                </li>
-                <li class="list">
-                  <div class="button-check">
-                    <img src="img/icon-check.svg" alt="" class="icon-check">
-                  </div>
-                  <p class="text">Playing game</p>
-                  <div class="div-btn"><img src="img/icon-cross.svg" alt="" class="button-delete"></div>
-                </li>
-              </ul>
-               <div class="bottom-bar">
-                  <p><span class="count">1</span> items left</p>
-                  <button class="button-clear" type="button">Clear Completed</button>
+          <!--todo list -->
+          <div class="todo-list-cont">
+            <ul class="todo-list">
+              <li class="list check">
+                <div class="button-check">
+                  <img src="img/icon-check.svg" alt="" class="icon-check" />
                 </div>
-            </div>
-            <!-- filter -->
-            <div class="filter">
-              <button type="button" class="button-all filter-btn active">All</button>
-              <button type="button" class="button-active filter-btn">Active</button>
-              <button type="button" class="button-completed filter-btn">Completed</button>
+                <p class="text">Coding</p>
+                <div class="div-btn">
+                  <img src="img/icon-cross.svg" alt="" class="button-delete" />
+                </div>
+              </li>
+              <li class="list">
+                <div class="button-check">
+                  <img src="img/icon-check.svg" alt="" class="icon-check" />
+                </div>
+                <p class="text">Playing game</p>
+                <div class="div-btn">
+                  <img src="img/icon-cross.svg" alt="" class="button-delete" />
+                </div>
+              </li>
+            </ul>
+            <div class="bottom-bar">
+              <p><span class="count">1</span> items left</p>
+              <button class="button-clear" type="button">
+                Clear Completed
+              </button>
             </div>
           </div>
-          <p class="info">Drag and drop to reorder list</p>
+          <!-- filter -->
+          <div class="filter">
+            <button type="button" class="button-all filter-btn active">
+              All
+            </button>
+            <button type="button" class="button-active filter-btn">
+              Active
+            </button>
+            <button type="button" class="button-completed filter-btn">
+              Completed
+            </button>
           </div>
         </div>
-    
+        <p class="info">Drag and drop to reorder list</p>
+      </div>
+    </main>
+
     <!-- drag and drop library -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
