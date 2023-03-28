@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid green;
+  /* outline: 1px solid green !important; */
 }
 /* dark theme */
 :root {
@@ -25,7 +25,6 @@ html[data-theme-mode="light"] {
   --Light-Grayish-Blue: hsl(33, 11%, 84%);
   --Dark-Grayish-Blue: hsl(236, 9%, 61%);
   --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-
   --Very-Dark-Blue: hsl(236, 33%, 92%);
   --Very-Dark-Desaturated-Blue: hsl(0, 0%, 98%);
   --Light-Grayish-Blue: hsl(235, 19%, 35%);
@@ -52,7 +51,6 @@ img {
 }
 .todo-container {
   max-width: 33.75rem;
-  /* height: 100%; */
   margin: auto;
 }
 .title-btn {
@@ -71,9 +69,7 @@ img {
   height: 1.675rem;
 }
 .todo-text {
-  /* height: 2.6rem; */
   margin: 1.5rem 0;
-  /* display: flex; */
   background: var(--Very-Dark-Desaturated-Blue);
   border-radius: 4px;
   padding: 0 4%;
@@ -91,7 +87,7 @@ img {
   color: var(--Light-Grayish-Blue);
 }
 .todo-list-cont {
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   overflow: hidden;
 }
 .todo-list {
@@ -135,12 +131,9 @@ img {
   background: none !important;
 }
 .text {
-  /* width: 100%; */
   font-size: 1.25rem;
   color: var(--Light-Grayish-Blue);
   margin-right: auto;
-  /* text-align: start; */
-  /* padding: 0.9rem 2%; */
   background: none !important;
   transition: 0.2s ease-out;
 }
@@ -186,7 +179,7 @@ img {
   display: none;
 }
 .filter button {
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 700;
   margin: 0 1.2rem;
   border: none;
@@ -219,10 +212,8 @@ button:hover {
     display: none;
   }
   .filter.smaller-screen {
-    height: 3.125rem !important;
-    display: block;
+    height: 3.125rem;
+    display: flex;
     margin: auto;
-    /* background-color: red; */
   }
-  
 }
