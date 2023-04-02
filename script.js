@@ -21,6 +21,12 @@ const inputText = document.querySelector(".input-text");
 const todoListCont = document.querySelector(".todo-list-cont");
 const todoList = document.querySelector(".todo-list");
 
+const todoListStore = [
+  "Complete online JavaScript course",
+  "Jog around the park 3x",
+  "10 minutes meditation",
+];
+
 // function list active/check
 const countUnactiveList = () => {
   const list = [...todoList.children];
@@ -43,9 +49,7 @@ inputText.addEventListener("keyup", (e) => {
                       <img src="img/icon-check.svg" alt="" class="icon-check">
                     </div>
                     <p class="text">${inputText.value}</p>
-                    <div class='div-btn'>
-                      <img src="img/icon-cross.svg" alt="" class="button-delete">
-                    </div>`;
+                    <img src="img/icon-cross.svg" alt="" class="button-delete">`;
 
     todoList.prepend(li);
     inputText.value = "";
@@ -55,23 +59,47 @@ inputText.addEventListener("keyup", (e) => {
 });
 
 // button cklik
+// const buttonCheck = document.querySelectorAll(".button-check");
+// todoListCont.addEventListener("click", (e) => {
+//   console.log(e.currentTarget);
+//   //button check click
+//   if (
+//     e.target.classList.contains("button-check") ||
+//     e.target.classList.contains("text")
+//   ) {
+//     e.target.parentElement.classList.toggle("check");
+//     //count active list
+//     countUnactiveList();
+//   } else if (e.target.classList.contains("div-btn")) {
+//     //button delete click
+//     e.target.parentElement.remove();
+//     //count active list
+//     countUnactiveList();
+//   }
+// });
 const buttonCheck = document.querySelectorAll(".button-check");
-todoListCont.addEventListener("click", (e) => {
-  //button check click
-  if (
-    e.target.classList.contains("button-check") ||
-    e.target.classList.contains("text")
-  ) {
-    e.target.parentElement.classList.toggle("check");
-    //count active list
-    countUnactiveList();
-  } else if (e.target.classList.contains("div-btn")) {
-    //button delete click
-    e.target.parentElement.remove();
-    //count active list
-    countUnactiveList();
-  }
+const textTodo = document.querySelectorAll(".list .text");
+const buttonDelete = document.querySelectorAll(".button-delete");
+
+buttonCheck.forEach((check) => {
+  check.addEventListener("click", function () {
+    this.parentElement.classList.toggle("check");
+    countUnactiveList(); //count active list
+  });
 });
+textTodo.forEach((text) => {
+  text.addEventListener("click", function () {
+    this.parentElement.classList.toggle("check");
+    countUnactiveList(); //count active list
+  });
+});
+buttonDelete.forEach((del) => {
+  del.addEventListener("click", function () {
+    this.parentElement.remove();
+    countUnactiveList(); //count active list
+  });
+});
+
 //button clear click
 const buttonClear = document.querySelector(".button-clear");
 function deleteList(button) {

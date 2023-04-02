@@ -137,17 +137,12 @@ img {
   background: none !important;
   transition: 0.2s ease-out;
 }
-.div-btn {
-  height: 100%;
-  width: 2rem;
-  display: flex;
-  align-items: center;
-}
 .button-delete {
   width: 0.8rem;
   height: 0.8rem;
   background: none !important;
   margin-left: auto;
+  cursor: pointer;
 }
 .bottom-bar {
   height: 3.125rem;
