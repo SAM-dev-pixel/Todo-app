@@ -117,39 +117,38 @@ const filter = document.querySelectorAll(".filter");
 const filterButtons = document.querySelectorAll(".filter-btn");
 filter.forEach((filter) => {
   filter.addEventListener("click", (e) => {
-    let list = e.target.parentElement.previousElementSibling.children[0].children;
+    let list =
+      e.target.parentElement.previousElementSibling.children[0].children;
+    const todoList = document.querySelectorAll(".list");
     if (e.target.classList.contains("button-all")) {
       //button all click
-      console.log(list);
-      for (let i = 0; i < list.length; i++) {
+      todoList.forEach((list) => {
         if (
-          list[i].classList.contains("check") === false ||
-          list[i].classList.contains("check") === true
+          list.classList.contains("check") === false ||
+          list.classList.contains("check") === true
         ) {
-          list[i].style.display = "flex";
+          list.style.display = "flex";
         }
-      }
+      });
     } else if (e.target.classList.contains("button-active")) {
       //button active click
       //catch list completed
-      // let list = e.target.parentElement.previousElementSibling.children[0].children;
-      for (let i = 0; i < list.length; i++) {
-        if (list[i].classList.contains("check")) {
-          list[i].style.display = "none";
+      todoList.forEach((list) => {
+        if (list.classList.contains("check")) {
+          list.style.display = "none";
         } else {
-          list[i].style.display = "flex";
+          list.style.display = "flex";
         }
-      }
+      });
     } else if (e.target.classList.contains("button-completed")) {
       //button completed click
-      // let list = e.target.parentElement.previousElementSibling.children[0].children;
-      for (let i = 0; i < list.length; i++) {
-        if (list[i].classList.contains("check") === false) {
-          list[i].style.display = "none";
+      todoList.forEach((list) => {
+        if (!list.classList.contains("check")) {
+          list.style.display = "none";
         } else {
-          list[i].style.display = "flex";
+          list.style.display = "flex";
         }
-      }
+      });
     }
     //filter button active
     filterButtons.forEach((btn) => {
@@ -164,8 +163,11 @@ filter.forEach((filter) => {
 });
 
 //drag and drop list items
-Sortable.create(todoList, {
-  ghostClass: "sortable-ghost",
-  animation: 150,
-  delay: 0,
-});
+function dragAndDropFeat() {
+  Sortable.create(todoList, {
+    ghostClass: "sortable-ghost",
+    animation: 150,
+    delay: 0,
+  });
+}
+dragAndDropFeat();

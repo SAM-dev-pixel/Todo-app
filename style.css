@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid green !important; */
+  outline: 1px solid green !important;
 }
 /* dark theme */
 :root {
@@ -59,14 +59,14 @@ img {
   justify-content: space-between;
 }
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(.75rem, 8vw, 2.5rem);
   font-weight: 700;
   color: var(--Very-Light-Grayish-Blue);
   letter-spacing: 0.375em;
 }
 .button-mode {
-  width: 1.675rem;
-  height: 1.675rem;
+  width: clamp(.25rem, 8vw, 1.675rem);
+  /* height: 1.675rem; */
 }
 .todo-text {
   margin: 1.5rem 0;
@@ -76,7 +76,7 @@ img {
 }
 .input-text {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: clamp(.75rem, 4vw, 1.25rem);
   padding: 1em;
   border: none;
   outline: none;
@@ -96,19 +96,20 @@ img {
   background: var(--Very-Dark-Desaturated-Blue);
 }
 .list {
-  height: 4rem;
+  /* height: 4rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0 1.5rem;
+  /* gap: 1.5em;*/
+  padding: clamp(.65em, 5vw, 1.125em) clamp(.75em, 6vw, 1.5em);
   border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
 }
 .button-check {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(.75rem, 5.5vw, 1.5rem);
+  /* height: 1.5rem; */
+  aspect-ratio: 1/1;
   border: 1px solid var(--Very-Dark-Grayish-Blue);
-  display: flex;
+  /* display: flex; */
   border-radius: 50%;
   transition: 0.2s ease-out;
 }
@@ -131,15 +132,15 @@ img {
   background: none !important;
 }
 .text {
-  font-size: 1.25rem;
+  font-size: clamp(.45rem, 3.5vw, 1.25rem);
   color: var(--Light-Grayish-Blue);
   margin-right: auto;
+  margin: 0 clamp(.75em, 6vw, 1.5em);
   background: none !important;
   transition: 0.2s ease-out;
 }
 .button-delete {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: clamp(.5rem, 5vw, 1.125rem);
   background: none !important;
   margin-left: auto;
   cursor: pointer;
