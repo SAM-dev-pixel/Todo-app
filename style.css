@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid green !important;
+  /* outline: 1px solid green !important; */
 }
 /* dark theme */
 :root {
@@ -18,6 +18,7 @@
     hsl(192, 100%, 67%),
     hsl(280, 87%, 65%)
   );
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
 }
 html[data-theme-mode="light"] {
   --Very-Light-Gray: hsl(0, 0%, 98%);
@@ -59,14 +60,13 @@ img {
   justify-content: space-between;
 }
 .title {
-  font-size: clamp(.75rem, 8vw, 2.5rem);
+  font-size: clamp(0.75rem, 8vw, 2.5rem);
   font-weight: 700;
   color: var(--Very-Light-Grayish-Blue);
   letter-spacing: 0.375em;
 }
 .button-mode {
-  width: clamp(.25rem, 8vw, 1.675rem);
-  /* height: 1.675rem; */
+  width: clamp(0.25rem, 8vw, 1.675rem);
 }
 .todo-text {
   margin: 1.5rem 0;
@@ -76,7 +76,7 @@ img {
 }
 .input-text {
   width: 100%;
-  font-size: clamp(.75rem, 4vw, 1.25rem);
+  font-size: clamp(0.75rem, 4vw, 1.25rem);
   padding: 1em;
   border: none;
   outline: none;
@@ -96,20 +96,17 @@ img {
   background: var(--Very-Dark-Desaturated-Blue);
 }
 .list {
-  /* height: 4rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 1.5em;*/
-  padding: clamp(.65em, 5vw, 1.125em) clamp(.75em, 6vw, 1.5em);
+  padding: clamp(0.65em, 5vw, 1.125em) clamp(0.75em, 6vw, 1.5em);
   border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
 }
 .button-check {
-  width: clamp(.75rem, 5.5vw, 1.5rem);
-  /* height: 1.5rem; */
+  width: clamp(0.75rem, 5.5vw, 1.5rem);
   aspect-ratio: 1/1;
   border: 1px solid var(--Very-Dark-Grayish-Blue);
-  /* display: flex; */
+  display: flex;
   border-radius: 50%;
   transition: 0.2s ease-out;
 }
@@ -125,22 +122,21 @@ img {
   color: var(--Very-Dark-Grayish-Blue);
 }
 .button-check img {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 40%;
   margin: auto;
   opacity: 0;
   background: none !important;
 }
 .text {
-  font-size: clamp(.45rem, 3.5vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.5vw, 1.25rem);
   color: var(--Light-Grayish-Blue);
   margin-right: auto;
-  margin: 0 clamp(.75em, 6vw, 1.5em);
+  margin: 0 clamp(0.75em, 6vw, 1.5em);
   background: none !important;
   transition: 0.2s ease-out;
 }
 .button-delete {
-  width: clamp(.5rem, 5vw, 1.125rem);
+  width: clamp(0.5rem, 5vw, 1.125rem);
   background: none !important;
   margin-left: auto;
   cursor: pointer;
@@ -191,9 +187,10 @@ button:hover {
   color: var(--Light-Grayish-Blue);
 }
 .info {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: var(--Very-Dark-Grayish-Blue);
   text-align: center;
+  padding-top: 1em;
   padding-bottom: 10%;
 }
 /* responsibility */
@@ -211,5 +208,6 @@ button:hover {
     height: 3.125rem;
     display: flex;
     margin: auto;
+    margin-top: 1rem;
   }
 }
