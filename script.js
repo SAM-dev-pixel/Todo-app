@@ -16,8 +16,7 @@ const themeMode = (button) => {
 };
 themeMode(document.querySelector(".button-mode"));
 
-// ADDING TEXT TO DO IN LIST
-const inputText = document.querySelector(".input-text");
+// ADDING TEXT TO DO IN LISt
 const todoListCont = document.querySelector(".todo-list-cont");
 const todoList = document.querySelector(".todo-list");
 
@@ -36,20 +35,25 @@ const todoListArr = [
   "Jog around the park 3x",
   "10 minutes meditation",
 ];
-let listStore = "";
-todoListArr.forEach((list) => (listStore += elementTodo(list)));
-todoList.innerHTML = listStore;
+
+function generateTodoList() {
+  let listStore = "";
+  todoListArr.forEach((list) => (listStore += elementTodo(list)));
+  return (todoList.innerHTML = listStore);
+}
+generateTodoList();
 
 // function list active/check
 const countUnactiveList = () => {
-  const list = [...todoList.children];
-  const listArr = list.filter((child) => {
-    return !child.classList.contains("check");
-  });
+  const listArr = [...todoList.children].filter(
+    (child) => !child.classList.contains("check")
+  );
   return (document.querySelector(".count").innerHTML = listArr.length);
 };
+countUnactiveList();
 
 //click enter button
+const inputText = document.querySelector(".input-text");
 inputText.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     //create element li
@@ -113,12 +117,9 @@ deleteList(buttonClear);
 
 // FILTER
 const filter = document.querySelectorAll(".filter");
-
 const filterButtons = document.querySelectorAll(".filter-btn");
 filter.forEach((filter) => {
   filter.addEventListener("click", (e) => {
-    let list =
-      e.target.parentElement.previousElementSibling.children[0].children;
     const todoList = document.querySelectorAll(".list");
     if (e.target.classList.contains("button-all")) {
       //button all click
@@ -131,8 +132,8 @@ filter.forEach((filter) => {
         }
       });
     } else if (e.target.classList.contains("button-active")) {
-      //button active click
-      //catch list completed
+      // button active click
+      // catch list completed
       todoList.forEach((list) => {
         if (list.classList.contains("check")) {
           list.style.display = "none";
